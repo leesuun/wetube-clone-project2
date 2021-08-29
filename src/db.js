@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 
 const mongoDB = process.env.DB_URL;
-console.log(process.env.DB_URL);
 
 mongoose.connect(mongoDB, {
     useNewUrlParser: true,

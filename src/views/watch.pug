@@ -5,7 +5,7 @@ block head
 block content
     .watch__wrapper
         div#videoContainer.videoContainer(data-id=video._id)
-            video(src="/"+video.videoUrl).video
+            video(src=video.videoUrl).video
             div#videoControls.videoControls
                 input(type="range" step=1 value=0 min=0 )#timeLine.timeLine
                 .controllers

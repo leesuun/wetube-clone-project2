@@ -3,13 +3,15 @@ mixin videos(info)
         h2=info.title
         a(href=`/video/${info.id}`)
             if info.thumbUrl
-                img(src="/"+info.thumbUrl style=`margin-bottom:18px;hegiht:100%` ).video-mixin__thumb
+                span asldaskdjaksd
+                img(src=info.thumbUrl style=`margin-bottom:18px;hegiht:100%` ).video-mixin__thumb
             else
-                video(src="/"+info.videoUrl ).video-mixin__thumb
+                video(src=info.videoUrl).video-mixin__thumb
+                span=info.videoUrl
         .video-mixin__info
             a(href=`/user/${info.owner._id}/profile`)
                 if !info.owner.socialOnly
-                    img(src="/"+info.owner.avatarUrl).follower__img
+                    img(src=info.owner.avatarUrl).follower__img
                 else
                     img(src=info.owner.avatarUrl).follower__img
                 span=info.owner.username

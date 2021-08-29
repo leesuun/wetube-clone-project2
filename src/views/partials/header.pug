@@ -14,7 +14,7 @@ header.screen-header
             a(href="/user/logout").login__controller 로그아웃
             a(href=`/user/${loggedInUser._id}/profile`)
                 if !loggedInUser.socialOnly
-                    img(src="/"+loggedInUser.avatarUrl).header__img 
+                    img(src=loggedInUser.avatarUrl).header__img 
                 else
                     if loggedInUser.socialType!=="Kakao"
                         img(src=loggedInUser.avatarUrl crossorigin ).header__img 

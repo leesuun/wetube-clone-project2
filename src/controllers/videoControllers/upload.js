@@ -26,6 +26,8 @@ export const postUpload = async (req, res) => {
         return res.status(400).redirect("/upload");
     }
 
+    console.log(videoFile[0].location);
+    console.log(thumbFile[0].location);
     const video = await Video.create({
         title,
         description,
