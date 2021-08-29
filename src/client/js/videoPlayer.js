@@ -54,13 +54,11 @@ const handleVolumn = (event) => {
 const handleLoadedMetadata = (event) => {
     timeLine.max = Math.floor(video.duration);
     totalTime.innerText = formatTime(Math.floor(video.duration));
-    console.log(video.duration);
 };
 
 const handleTimeUpdate = (event) => {
     currenTime.innerText = formatTime(Math.floor(video.currentTime));
     timeLine.value = Math.floor(video.currentTime);
-    console.log(video.currentTime);
 };
 
 const formatTime = (second) => {
