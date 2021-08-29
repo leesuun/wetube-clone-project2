@@ -16,6 +16,7 @@ var _app = _interopRequireDefault(require("./app"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+console.log("sad");
 var PORT = 4002 || process.env.DB_URL;
 
 _app["default"].listen(PORT, function () {
