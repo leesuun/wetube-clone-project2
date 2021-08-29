@@ -60,6 +60,7 @@ const handleLoadedMetadata = (event) => {
 const handleTimeUpdate = (event) => {
     currenTime.innerText = formatTime(Math.floor(video.currentTime));
     timeLine.value = Math.floor(video.currentTime);
+    console.log(video.currentTime);
 };
 
 const formatTime = (second) => {
