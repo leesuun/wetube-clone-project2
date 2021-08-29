@@ -27,14 +27,16 @@ export const postUpload = async (req, res) => {
         return res.status(400).redirect("/upload");
     }
 
-    console.log("thumbFile[0].location", thumbFile[0].location);
-
     const video = await Video.create({
         title,
         description,
         genre,
         videoUrl: isHeroku ? videoFile[0].location : videoFile[0].path,
-        thumbUrl: isHeroku ? thumbFile[0].location : "",
+        thumbUrl: thumbFile
+            ? isHeroku
+                ? thumbFile[0].location
+                : thumbFile[0].path
+            : "",
         hashtag: Video.formatHashtag(hashtag),
         owner: _id,
         createAt: new Date(),
