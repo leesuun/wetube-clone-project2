@@ -38,7 +38,7 @@ block content
                     each comment in video.comments
                         li
                             i.fas.fa-comment.fa-lg
-                            span=comment.text
+                            span(style="color:black")=comment.text
                             if String(comment.owner) === String(loggedInUser._id)   
                                 button#delBtn(data-commentid=comment._id) ❌ 
 
