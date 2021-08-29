@@ -15,6 +15,7 @@ export const postUpload = async (req, res) => {
         body: { title, description, genre, hashtag },
         files: { videoFile, thumbFile },
     } = req;
+    const isHeroku = process.env.NODE_ENV === "production";
 
     if (videoFile[0].size > 30000000) {
         req.flash("error", "파일 용량 초과 에러 ");
@@ -26,14 +27,12 @@ export const postUpload = async (req, res) => {
         return res.status(400).redirect("/upload");
     }
 
-    console.log(videoFile[0].location);
-    console.log(thumbFile[0].location);
     const video = await Video.create({
         title,
         description,
         genre,
-        videoUrl: videoFile[0].location,
-        thumbUrl: thumbFile ? thumbFile[0].location : "",
+        videoUrl: isHeroku ? video[0].location : video[0].path,
+        thumbUrl: isHeroku ? thumb[0].location : video[0].path,
         hashtag: Video.formatHashtag(hashtag),
         owner: _id,
         createAt: new Date(),
