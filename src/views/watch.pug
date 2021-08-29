@@ -30,17 +30,18 @@ block content
                     a(href=`${video._id}/edit-video`) edit video &rarr; 
                 li
                     a(href=`${video._id}/delete`) delete video &rarr;
-        .video__comment
-            form#commentForm.comment__form
-                textarea( placeholder="write a comment")
-                button add comment
-            ul
-                each comment in video.comments
-                    li
-                        i.fas.fa-comment.fa-lg
-                        span=comment.text
-                        if String(comment.owner) === String(loggedInUser._id)   
-                            button#delBtn(data-commentid=comment._id) ❌ 
+        if loggedIn
+            .video__comment
+                form#commentForm.comment__form
+                    textarea( placeholder="write a comment")
+                    button add comment
+                ul
+                    each comment in video.comments
+                        li
+                            i.fas.fa-comment.fa-lg
+                            span=comment.text
+                            if String(comment.owner) === String(loggedInUser._id)   
+                                button#delBtn(data-commentid=comment._id) ❌ 
 
 
 block scripts
