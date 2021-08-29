@@ -9,7 +9,7 @@ header.screen-header
     div
         i#darkMode.fas.fa-moon.fa-lg
         if !loggedIn
-            a(href="/login").login__controller 로그인
+            a(href="/login").login__controller 로그인 ds
         else
             a(href="/user/logout").login__controller 로그아웃
             a(href=`/user/${loggedInUser._id}/profile`)
