@@ -10,5 +10,5 @@ console.log("sad");
 const PORT = process.env.DB_URL || 4002;
 
 app.listen(PORT, () => {
-    console.log(`✅Server listening on PORT http://localhost:${PORT} 🚀`);
+    console.log(`✅Server listening on PORT http://localhost:${PORT}`);
 });
