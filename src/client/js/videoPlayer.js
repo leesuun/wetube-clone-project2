@@ -136,7 +136,6 @@ const handleEnded = (event) => {
     const {
         dataset: { id },
     } = videoContainer;
-    console.log(id);
 
     fetch(`/api/video/${id}/view`, {
         method: "POST",
