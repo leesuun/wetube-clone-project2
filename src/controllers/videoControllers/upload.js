@@ -32,7 +32,7 @@ export const postUpload = async (req, res) => {
         description,
         genre,
         videoUrl: isHeroku ? videoFile[0].location : videoFile[0].path,
-        thumbUrl: isHeroku ? thumbFile[0].location : videoFile[0].path,
+        thumbUrl: isHeroku ? thumbFile[0].location : "",
         hashtag: Video.formatHashtag(hashtag),
         owner: _id,
         createAt: new Date(),
