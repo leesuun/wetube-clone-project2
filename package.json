@@ -26,6 +26,7 @@
   "dependencies": {
     "@ffmpeg/core": "^0.8.5",
     "@ffmpeg/ffmpeg": "^0.9.8",
+    "aws-sdk": "^2.978.0",
     "babel-loader": "^8.2.2",
     "bcrypt": "^5.0.1",
     "connect-mongo": "^4.4.1",
@@ -37,6 +38,7 @@
     "mongoose": "^5.13.7",
     "morgan": "^1.10.0",
     "multer": "^1.4.3",
+    "multer-s3": "^2.9.0",
     "node-fetch": "^2.6.1",
     "nodemon": "^2.0.12",
     "pug": "^3.0.2",
