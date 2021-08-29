@@ -9,7 +9,7 @@ block content
     .profile__wrapper
         section.profile__section            
             if !user.socialOnly
-                img(src="/"+user.avatarUrl).profile__img
+                img(src=user.avatarUrl).profile__img
             else
                 img(src=user.avatarUrl).profile__img
             ul.profile__info
