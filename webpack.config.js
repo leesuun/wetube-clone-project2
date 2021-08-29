@@ -11,8 +11,6 @@ module.exports = {
         recorder: BASE_JS + "recorder.js",
         dark: BASE_JS + "dark.js",
     },
-    mode: "development",
-    watch: true,
     plugins: [
         new MiniCssExtractPlugin({
             filename: "css/styles.css",

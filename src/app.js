@@ -1,4 +1,5 @@
 // modules
+
 import express, { urlencoded } from "express";
 import morgan from "morgan";
 import path from "path";
@@ -20,7 +21,7 @@ const app = express();
 const logger = morgan("dev");
 
 app.set("view engine", "pug");
-app.set("views", path.join(__dirname, "views"));
+app.set("views", process.cwd() + "/src/views");
 
 app.use(
     session({
@@ -58,7 +59,7 @@ app.use(flash());
 app.use(express.json());
 app.use("/uploads", express.static("uploads"));
 app.use("/assets", express.static("assets"));
-app.use(express.urlencoded(true));
+app.use(express.urlencoded({ extended: true }));
 app.use(logger);
 app.use(localsMiddleware);
 
