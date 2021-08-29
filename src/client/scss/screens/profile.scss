@@ -1,0 +1,30 @@
+.profile__wrapper {
+    display: flex;
+    margin-top: 7rem;
+    flex-direction: column;
+    align-items: center;
+
+    .profile__section {
+        display: flex;
+        align-items: center;
+
+        ul {
+            margin-left: 2rem;
+            color: white;
+
+            li {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .profile__link {
+        margin-top: 1rem;
+    }
+}
+
+.profile__img {
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.8);
+    width: 200px;
+    height: 200px;
+}

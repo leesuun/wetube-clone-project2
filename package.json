@@ -1,0 +1,54 @@
+{
+  "name": "wetube-clone-project",
+  "version": "1.0.0",
+  "description": "wetube-clone",
+  "scripts": {
+    "dev:server": "nodemon",
+    "dev:assets": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leesuun/wetube-clone-project.git"
+  },
+  "keywords": [
+    "clone"
+  ],
+  "author": "SuUn LEE.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leesuun/wetube-clone-project/issues"
+  },
+  "homepage": "https://github.com/leesuun/wetube-clone-project#readme",
+  "dependencies": {
+    "@ffmpeg/core": "^0.8.5",
+    "@ffmpeg/ffmpeg": "^0.9.8",
+    "babel-loader": "^8.2.2",
+    "bcrypt": "^5.0.1",
+    "connect-mongo": "^4.4.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.2",
+    "mongoose": "^5.13.7",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.12",
+    "pug": "^3.0.2",
+    "regenerator-runtime": "^0.13.9"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/node": "^7.14.9",
+    "@babel/preset-env": "^7.15.0",
+    "css-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^1.5.0",
+    "sass": "^1.38.0",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+  }
+}

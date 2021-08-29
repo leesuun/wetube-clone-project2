@@ -1,0 +1,38 @@
+extends layout/base
+
+include ./mixins/video
+include ./mixins/followers
+
+block head
+
+block content
+    .profile__wrapper
+        section.profile__section            
+            if !user.socialOnly
+                img(src="/"+user.avatarUrl).profile__img
+            else
+                img(src=user.avatarUrl).profile__img
+            ul.profile__info
+                li
+                    span="닉네임: "+user.username
+                li
+                    span="이메일: "+user.email
+                li
+                    span="지역: "+user.location
+                li
+                    span="게시물: "+user.videos.length+"개"
+                if user.socialOnly
+                    if user.socialType !== "Kakao"
+                        li.follower__list
+                            span followers:       
+                            each follower in user.socialFollowingUser
+                                +followers(follower)
+        if !user.socialOnly
+            if String(loggedInUser._id) === String(user._id) 
+                a(href="edit-profile").profile__link edit-profile &rarr;
+        div.video-grid
+            each video in user.videos
+                +videos(video)
+            else
+                span.empty__message No videos found
+            

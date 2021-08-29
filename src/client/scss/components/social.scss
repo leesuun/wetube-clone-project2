@@ -1,0 +1,23 @@
+.follower__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 5px;
+
+        span {
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+        }
+    }
+}
+
+.follower__img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}

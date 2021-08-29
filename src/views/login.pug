@@ -1,0 +1,21 @@
+extends layout/base
+
+block head
+    meta(name="description" content="유튜브 클론 프로젝트 login-page 입니다.")
+
+block content
+    .form__container
+        form(method="POST").component__form
+            input(type="text" placeholder="아이디" name="username") 
+            input(type="password" placeholder="패스워드" name="password") 
+            input(type="submit" value="로그인")
+            .social__selector 
+                a(href="/user/github/start")
+                    i.fab.fa-github.fa-2x
+                    span github-login
+                a(href="/user/kakao/start")
+                    i.fas.fa-comment.fa-2x 
+                    span kakao-login 
+        .line     
+        span.link Dont' have an account? 
+            a(href="join") Create Now &rarr;

@@ -1,0 +1,20 @@
+.watch__wrapper {
+    position: relative;
+    margin-top: 7rem;
+    .video {
+        width: 800px;
+        height: 450px;
+    }
+    .video__info {
+        margin-top: 1rem;
+        color: white;
+
+        li {
+            margin-top: 0.5rem;
+        }
+
+        .video__title {
+            font-size: 1.5rem;
+        }
+    }
+}

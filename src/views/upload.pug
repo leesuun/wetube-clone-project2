@@ -1,0 +1,22 @@
+extends layout/base
+
+block head
+
+block content
+    .form__container(style="margin-top:5rem;height:110vh")
+        div
+            video(src="#")#preview
+            button#actionBtn Recording
+        form(method="POST" enctype="multipart/form-data").component__form
+            label(for="videoFile") VideoFile
+            input(type="file" id="videoFile"  name="videoFile" accept="video/*" required).video__file
+            label(for="thumbFile") ThumbFile 
+            input(type="file" id="thumbFile" name="thumbFile" accept="image/*").video__file
+            input(type="text" name="title" placeholder="title" required maxLength=20) 
+            input(type="text" name="description" placeholder="description" required maxLength=20) 
+            input(type="text" name="genre" placeholder="genre") 
+            input(type="text" name="hashtag" placeholder="hashtags seperate by comma") 
+            input(type="submit" value="upload") 
+block scripts 
+    script(src="/assets/js/recorder.js") 
+        

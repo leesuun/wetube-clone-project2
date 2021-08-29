@@ -1,0 +1,90 @@
+.screen-header {
+    display: flex;
+    padding: 0.7rem 3rem;
+    background-color: $component-bg;
+    border: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+
+    width: 95%;
+    .header__logo {
+        display: flex;
+        margin-left: 35px;
+        width: 15%;
+        i {
+            display: flex;
+            align-items: center;
+            color: $logo-color;
+            font-size: 2rem;
+        }
+        span {
+            margin-left: 0.3rem;
+            color: white;
+            font-size: 1.5rem;
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+                "Lucida Sans", Arial, sans-serif;
+
+            font-weight: 500;
+        }
+
+        // border: 1px solid black;
+    }
+
+    .search__form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+
+        i {
+            color: white;
+        }
+        .fa-microphone {
+            margin-left: 1rem;
+        }
+        .fa-search {
+            background-color: #313131;
+            padding: 0.4rem 1.2rem;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        input {
+            border: none;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            width: 100%;
+            height: 25px;
+        }
+    }
+
+    div {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 15%;
+        i {
+            color: white;
+            cursor: pointer;
+        }
+
+        .login__controller {
+            background-color: $component-bg;
+            border: 1px solid #3ea6ff;
+            padding: 0.3rem 0.6rem;
+            color: #3ea6ff;
+            border-radius: 5px;
+        }
+    }
+
+    img {
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        image-rendering: -webkit-optimize-contrast;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+    }
+}

@@ -1,0 +1,24 @@
+header.screen-header
+    a(href="/").header__logo
+        i.fab.fa-youtube.fa-lg
+            span WeTube
+    form(method="POST" action="/search").search__form
+        input(type="text" name="keyword")
+        i.fas.fa-search.fa-lg
+        i.fas.fa-microphone.fa-lg
+    div
+        i#darkMode.fas.fa-moon.fa-lg
+        if !loggedIn
+            a(href="/login").login__controller 로그인
+        else
+            a(href="/user/logout").login__controller 로그아웃
+            a(href=`/user/${loggedInUser._id}/profile`)
+                if !loggedInUser.socialOnly
+                    img(src="/"+loggedInUser.avatarUrl).header__img 
+                else
+                    if loggedInUser.socialType!=="Kakao"
+                        img(src=loggedInUser.avatarUrl crossorigin ).header__img 
+                    else
+                        div(style="border-radius:50%;width:35px;height:35px;border:1px solid #3ea6ff; font-size:.7rem") CORS
+
+            

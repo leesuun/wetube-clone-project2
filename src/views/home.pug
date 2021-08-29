@@ -1,0 +1,12 @@
+extends layout/base
+
+include ./mixins/video
+
+block head
+
+block content
+    div.video-grid
+        each video in videos
+            +videos(video)
+        else
+            span.empty__message No videos found

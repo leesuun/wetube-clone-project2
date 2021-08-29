@@ -1,0 +1,46 @@
+// config
+@import "./config/reset.scss";
+@import "./config/variable.scss";
+
+// components
+@import "./components/header.scss";
+@import "./components/nav.scss";
+@import "./components/video.scss";
+@import "./components/form.scss";
+@import "./components/social.scss";
+@import "./components/inputFile.scss";
+@import "./components/videoPlayer.scss";
+@import "./components/comment.scss";
+@import "./components//message.scss";
+
+// screens
+@import "./screens/profile.scss";
+@import "./screens/watch.scss";
+@import "./screens/upload.scss";
+
+body {
+    background-color: $main-bg;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+label {
+    margin-top: 0.3rem;
+    margin-bottom: -0.3rem;
+    width: 100%;
+    color: white;
+    text-align: left;
+}
+
+img {
+    image-rendering: -webkit-optimize-contrast;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}

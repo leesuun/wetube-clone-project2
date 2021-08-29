@@ -1,0 +1,53 @@
+extends layout/base
+
+block head
+
+block content
+    .watch__wrapper
+        div#videoContainer.videoContainer(data-id=video._id)
+            video(src="/"+video.videoUrl).video
+            div#videoControls.videoControls
+                input(type="range" step=1 value=0 min=0 )#timeLine.timeLine
+                .controllers
+                    div
+                        button#playBtn.fas.fa-play.fa-lg
+                        button#muteBtn.fas.fa-volume-up.fa-lg
+                        input(type="range" step=0.1 max=1 min=0 )#volumeRange.volumeRange
+                        .time
+                            span#currenTime 00:00
+                            span /
+                            span#totalTime 00:00
+                    div
+                        button#fullScreenBtn.fas.fa-expand.fa-lg     
+        ul.video__info
+            li.video__title
+                span=video.description
+            li.video__views
+                span="조회수 "+video.meta.views+"회,  "
+                span=video.createAt.toISOString().substr(0, 10)
+            if String(loggedInUser._id) === String(video.owner._id)
+                li
+                    a(href=`${video._id}/edit-video`) edit video &rarr; 
+                li
+                    a(href=`${video._id}/delete`) delete video &rarr;
+        .video__comment
+            form#commentForm.comment__form
+                textarea( placeholder="write a comment")
+                button add comment
+            ul
+                each comment in video.comments
+                    li
+                        i.fas.fa-comment.fa-lg
+                        span=comment.text
+                        if String(comment.owner) === String(loggedInUser._id)   
+                            button#delBtn(data-commentid=comment._id) ❌ 
+
+
+block scripts
+    script(src="/assets/js/videoPlayer.js")
+    if loggedIn
+        script(src="/assets/js/commentSection.js") 
+    
+    
+        
+        

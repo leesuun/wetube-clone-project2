@@ -1,0 +1,23 @@
+mixin videos(info)
+    .video-mixin
+        h2=info.title
+        a(href=`/video/${info.id}`)
+            if info.thumbUrl
+                img(src="/"+info.thumbUrl style=`margin-bottom:18px;hegiht:100%` ).video-mixin__thumb
+            else
+                video(src="/"+info.videoUrl ).video-mixin__thumb
+        .video-mixin__info
+            a(href=`/user/${info.owner._id}/profile`)
+                if !info.owner.socialOnly
+                    img(src="/"+info.owner.avatarUrl).follower__img
+                else
+                    img(src=info.owner.avatarUrl).follower__img
+                span=info.owner.username
+            .video-mixin__info-meta
+                .video-mixin__content
+                    span=info.description
+                .video-mixin__content
+                    span="조회수: "+info.meta.views+"회 , "
+                    span=info.createAt.toISOString().substr(0, 10)
+                .video-mixin__content
+                    span=" 해시태그: "+info.hashtag

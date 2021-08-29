@@ -1,0 +1,16 @@
+extends layout/base
+
+block head
+
+block content
+    .form__container
+        form(method="POST").component__form
+            label(for="title") Title
+            input(type="text" name="title" id="title" value=video.title).input__file
+            label(for="description") Description 
+            input(type="text" name="description" id="description" value=video.description) 
+            label(for="genre") Genre
+            input(type="text" name="genre" id="genre" value=video.genre) 
+            label(for="hashtag") Hashtags
+            input(type="text" name="hashtag" id="hashtag" value=video.hashtag.toString()) 
+            input(type="submit" value="upload") 

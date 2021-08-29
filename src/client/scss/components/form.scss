@@ -1,0 +1,73 @@
+.form__container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+    .component__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input {
+            margin-top: 10px;
+            width: 500px;
+            height: 35px;
+            padding: 0.5rem;
+            border-radius: 10px;
+            border: none;
+        }
+        input:last-child {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            height: 45px;
+            background-color: #818181;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .social__selector {
+            display: flex;
+            margin-top: 1.5rem;
+
+            a {
+                display: flex;
+
+                align-items: center;
+                span {
+                    font-size: 1rem;
+                    margin-left: 5px;
+                    color: white;
+                }
+            }
+
+            a:first-child {
+                margin-right: 2.5rem;
+
+                i {
+                    color: white;
+                }
+            }
+            a:last-child {
+                i {
+                    color: #391d1d;
+                    background-color: #f1d900;
+                    padding: 0.3rem;
+                    font-size: 1.5rem;
+                    border-radius: 0.5rem;
+                }
+            }
+        }
+    }
+
+    .line {
+        margin: 1rem auto;
+        height: 0.1px;
+        width: 100%;
+        background-color: rgb(131, 131, 131);
+    }
+    .link {
+        color: rgb(131, 131, 131);
+    }
+}

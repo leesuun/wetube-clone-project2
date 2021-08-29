@@ -1,0 +1,29 @@
+nav
+    ul
+        li
+            i.fas.fa-bars.fa-lg
+        li
+            a(href="/")
+                i.fas.fa-home.fa-lg
+                span 홈
+        li
+            a(href="/search")
+                i.far.fa-compass.fa-lg
+                span 탐색
+        if loggedIn
+            li
+                a(href=`/user/${loggedInUser._id}/profile`)
+                    i.fas.fa-user.fa-lg
+                    span 프로필
+            li
+                a(href="/video/upload")
+                    i.fas.fa-video.fa-lg
+                    span 업로드
+
+            li
+                a(href="#")
+                    i.fas.fa-store.fa-lg
+                    span 저장
+
+        
+    

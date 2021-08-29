@@ -1,0 +1,33 @@
+include ../mixins/message
+
+doctype html
+html(lang="en")
+    head
+        block head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="keywords" content="Youtube-clone, main")
+        meta(name="author" content="LeeSuUn")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous")
+        link(rel="stylesheet", href="/assets/css/styles.css")
+        title #{siteName} | #{pageTitle}
+    body
+        include ../partials/header
+        include ../partials/nav
+        if messages.error
+            +message("error", messages.error)
+        if messages.info
+            +message("info", messages.info)
+        if messages.success
+            +message("sucess", messages.success)
+        main
+            block content
+        script(src="https://developers.kakao.com/sdk/js/kakao.js")
+        script(src="/assets/js/dark.js")
+        script.
+            Kakao.init("b503f617844ceb8bbe2d794358409d92");
+            console.log(Kakao.isInitialized());
+        script(src="/assets/js/main.js") 
+        block scripts
+        

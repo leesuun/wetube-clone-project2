@@ -1,0 +1,18 @@
+extends layout/base
+
+block head
+    meta(name="description" content="유튜브 클론 프로젝트 join-page 입니다.")
+
+block content
+    .form__container
+        form(method="POST").component__form
+            input(type="text" placeholder="아이디" name="username" require=true)
+            input(type="email" placeholder="이메일" name="email" require=true minLength=6)
+            input(type="password" placeholder="비밀번호 (영문, 숫자 혼합)" name="password" require=true minLength=6)
+            input(type="password" placeholder="비밀번호 확인" name="passwordConf" require=true minLength=6)
+            input(type="text" placeholder="지역 (Not Require)" name="location")
+            input(type="submit" value="가입")
+        .line     
+        span.link Are you ready an account? 
+            a(href="/login") LogIn Now &rarr; 
+
