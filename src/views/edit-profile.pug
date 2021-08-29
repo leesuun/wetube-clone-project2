@@ -6,7 +6,7 @@ block content
     .form__container
         form(method="POST" enctype="multipart/form-data").component__form
             if loggedInUser.avatarUrl
-                img(src="/"+loggedInUser.avatarUrl).profile__img
+                img(src=loggedInUser.avatarUrl).profile__img
             label(for="avatar") avatar 
             input(type="file" name="avatar" id="avatar"  accept="images/*").input__file
             input(type="text" name="username" value=loggedInUser.username )
