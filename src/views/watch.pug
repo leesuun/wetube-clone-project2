@@ -30,7 +30,6 @@ block content
                     a(href=`${video._id}/edit-video`) edit video &rarr; 
                 li
                     a(href=`${video._id}/delete`) delete video &rarr;
-        if loggedIn
             .video__comment
                 form#commentForm.comment__form
                     textarea( placeholder="write a comment")
