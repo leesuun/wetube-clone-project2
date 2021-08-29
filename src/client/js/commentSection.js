@@ -36,8 +36,6 @@ const deleteComment = (commentid) => {
     }
 };
 
-console.log("sad");
-
 const handleSubmit = async (event) => {
     event.preventDefault();
     const text = textarea.value;
