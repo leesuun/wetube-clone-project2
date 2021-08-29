@@ -3,7 +3,6 @@ mixin videos(info)
         h2=info.title
         a(href=`/video/${info.id}`)
             if info.thumbUrl
-                span=info.thumbUrl
                 img(src=info.thumbUrl style=`margin-bottom:18px;hegiht:100%` ).video-mixin__thumb
             else
                 video(src=info.videoUrl).video-mixin__thumb
