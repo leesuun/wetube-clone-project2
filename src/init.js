@@ -7,7 +7,7 @@ import "./models/Comment";
 import app from "./app";
 
 console.log("sad");
-const PORT = 4002 || process.env.DB_URL;
+const PORT = process.env.DB_URL || 4002;
 
 app.listen(PORT, () => {
     console.log(`✅Server listening on PORT http://localhost:${PORT} 🚀`);
