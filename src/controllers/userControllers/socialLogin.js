@@ -7,7 +7,7 @@ export const kakaoLoginStart = async (req, res) => {
 
     const config = {
         client_id: process.env.KA_CLIENT,
-        redirect_uri: "http://localhost:4002/user/kakao/finish",
+        redirect_uri: "https://wetube-eee.herokuapp.com//user/kakao/finish",
         response_type: "code",
         prompt: "profile_nickname,profile_image,account_email",
     };
@@ -25,7 +25,7 @@ export const kakaoLoginFinish = async (req, res) => {
     const config = {
         grant_type: "authorization_code",
         client_id: process.env.KA_CLIENT,
-        redirect_uri: "http://localhost:4002/user/kakao/finish",
+        redirect_uri: "https://wetube-eee.herokuapp.com//user/kakao/finish",
         code,
     };
 

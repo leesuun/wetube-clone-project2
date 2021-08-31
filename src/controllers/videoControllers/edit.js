@@ -37,7 +37,7 @@ export const postEdit = async (req, res) => {
     }
 
     if (String(video.owner) !== String(_id)) {
-        console.log("not video owner");
+        
         return res.status(403).redirect(`/video/${id}`);
     }
     try {
@@ -51,7 +51,7 @@ export const postEdit = async (req, res) => {
         return res.status(400).redirect("edit-video");
     }
 
-    // console.log(video);
+    
 
     return res.redirect(`/video/${id}`);
 };
