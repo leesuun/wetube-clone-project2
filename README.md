@@ -8,9 +8,9 @@ One Paragraph of project description goes here / 프로젝트의 전반적인 �
 이 곳에서 설치에 관련된 이야기를 해주시면 좋습니다.
 
 
-### Installing / 설치
+### siteUrl 
 
-아래 사항들로 현 프로젝트에 관한 모듈들을 설치할 수 있습니다.
+https://dashboard.heroku.com/apps/wetube-eee
 
 ```
 예시
